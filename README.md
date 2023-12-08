@@ -1,6 +1,3 @@
-# Starter Folder
+# Travelo APP
 
-Silahkan lakukan perubahan code dengan mengikuti tutorial di folder ini.
-Jangan lakukan perubahan pada Folder finish.
-
-Happy coding!
+Projek ini merupakan website untuk pemesanan travel secara online.
