@@ -1,10 +1,11 @@
 import Image from 'next/image';
+
 import Button from 'components/Button';
 
 const PromoCard = () => {
 	return (
-		<article className='bg-white shadow-lg rounded-xl overflow-hiddedn w-[500px] h-[312px] flex'>
-			<figure className='relative w-[212px] h-full'>
+		<article className='bg-white shadow-lg rounded-xl overflow-hidden w-[500px] h-[312px] flex'>
+			<figure className='relative w-[212px] h-full]'>
 				<Image
 					src='/assets/home/borobudur.png'
 					alt='Borobudur'
@@ -13,6 +14,7 @@ const PromoCard = () => {
 					objectPosition='center'
 				/>
 			</figure>
+
 			<div className='flex-1 flex flex-col justify-center p-4'>
 				<p className='text-heading-4 text-gray-100 font-label font-bold'>
 					Borobudur, Yogyakarta
