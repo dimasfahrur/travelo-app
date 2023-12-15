@@ -9,7 +9,7 @@ const PromoCaraousel = () => {
 			</h3>
 
 			<Carousel
-				className='py-5'
+				className='py-5 z-10'
 				containerClass='carousel-container'
 				arrows
 				centerMode={false}
