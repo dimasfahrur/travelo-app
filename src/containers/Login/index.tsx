@@ -1,9 +1,10 @@
 import Layout from 'components/Layout';
-import Button from 'components/Button';
 import Input from 'components/Input';
-import styles from './Login.module.css';
+import Button from 'components/Button';
+
 import { useComponentLogic } from './hooks';
-import { REG_EXP } from 'src/constants/regexp';
+import { REG_EXP } from 'constants/regexp';
+import styles from './Login.module.css';
 
 const Login = () => {
 	const { register, handleSubmit, onSubmit, errors } = useComponentLogic();
@@ -11,22 +12,24 @@ const Login = () => {
 	return (
 		<Layout noFooter>
 			<section className={styles.section}>
-				<div className={styles.formWraper}>
+				<div className={styles.formWrapper}>
 					<p className='text-heading-3 font-label font-extrabold'>Masuk</p>
-
 					<div className='flex mt-3'>
 						<p className='text-heading-5 text-gray-50 font-semibold'>
 							Belum punya akun?
 						</p>
 						<a
 							href='#'
-							className='text-heaidng-5 text-blue-100 font-semibold ml-2 hover:underline'
+							className='text-heading-5 text-blue-100 font-semibold ml-2 hover:underline'
 						>
-							Daftar disini
+							Daftar di sini
 						</a>
 					</div>
 
-					<form className='flex flex-col mt-8'>
+					<form
+						className='flex flex-col mt-8'
+						onSubmit={handleSubmit(onSubmit)}
+					>
 						<Input
 							register={register}
 							errors={errors}
@@ -41,16 +44,16 @@ const Login = () => {
 							placeholder='Masukkan alamat email'
 							className='mb-6'
 						/>
-
 						<Input
 							register={register}
 							errors={errors}
 							required={{ value: true, message: 'Password harus diisi.' }}
-							label='Password'
+							label='Kata sandi'
 							type='password'
 							name='password'
-							placeholder='Masukan kata sandi'
+							placeholder='Masukkan kata sandi'
 						/>
+
 						<a
 							href='#'
 							className='text-heading-5 text-blue-100 font-semibold mt-8 mb-4 hover:underline'
@@ -66,7 +69,7 @@ const Login = () => {
 						</Button>
 					</form>
 
-					<p className='text-heading-5 text-gray-70 my-8'>Atau Masuk dengan</p>
+					<p className='text-heading-5 text-gray-70 my-8'>Atau masuk dengan</p>
 					<Button
 						className='mb-4'
 						variant='google'
